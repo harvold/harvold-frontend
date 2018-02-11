@@ -1,24 +1,22 @@
 body, html {
-    height: 100%;
+    height: auto;
     transform: scale(1);
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
     max-width: 100%;
-    background: 
+    background: linear-gradient(blue, white);
 }
 
-.main-parallax {
+.splash-picture {
     /* Image */
     background-image: url(Images/background-temp.jpg);
 
-    /* Height */
-    height: 35vh;;
-    width: 100vw;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    height: 35vh;
+    width: 80vw;
+    margin-left: 10vw;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,6 +29,8 @@ body, html {
 .navbar {
     background-color: #8eb4ce;
     height: 10vh;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .navbar a:hover {
@@ -40,7 +40,7 @@ body, html {
 
 .navigation {
     height: 100%;
-    width: 9.75vw;
+    width: 11.8vw;
     cursor: pointer;
     background-color: rgba(150, 150, 150, 0);
     text-decoration: none;
@@ -53,4 +53,11 @@ body, html {
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
     font-size: 32px;
+}
+
+.main-body {
+    background: #edf0f4;
+    height: 100vh;
+    width: 80vw;
+    margin-left: 10vw;
 }
