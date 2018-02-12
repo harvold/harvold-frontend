@@ -20,10 +20,14 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .logo {
     height: 10vh;
+    position: absolute;
+    display: block;
+    bottom: 0;
 }
 
 .navbar {
