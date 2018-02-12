@@ -27,7 +27,7 @@ body, html {
 }
 
 .navbar {
-    background-color: #8eb4ce;
+    background: linear-gradient(#2d2d2d, #878787);
     height: 5vh;
     width: 80vw;
     margin-left: 10vw;
@@ -36,8 +36,8 @@ body, html {
 }
 
 .navbar a:hover {
-    background: yellow;
-    color: #8eb4ce;
+    background: linear-gradient(#878787, #d8d8d8);
+    color: black;
 }
 
 .navigation {
@@ -53,8 +53,10 @@ body, html {
     padding: auto;
     text-align: center;
     display: inline-block;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 28px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-style: bold;
+    font-size: 20px;
+    color: white;
 }
 
 .main-body {
