@@ -78,38 +78,38 @@ body, html {
 
 .player-info {
     float: left;
-    margin: 3vw;
+    margin: 2vw;
     margin-bottom: 1vh;
-    margin-top: 5vh;
+    margin-top: 4vh;
     padding: 1vw;
     background: green;
     color: white;
-    width: 20vw;
+    width: 15vw;
     height: 25vh;
     font-size: 12px;
 }
 
 .party {
     float: left;
-    margin: 3vw;
+    margin: 2vw;
     margin-top: 3vh;
     padding: 1vw;
     background: green;
     color: white;
-    width: 20vw;
+    width: 15vw;
     height: 30vh;
     font-size: 12px;
 }
 
 .map {
     float: right;
-    margin-right: 3vw;
-    margin-top: 5vh;
+    margin-right: 2vw;
+    margin-top: 4vh;
     margin-bottom: 3vh;
     padding: 1vw;
     background: green;
     color: white;
-    width: 47vw;
+    width: 55vw;
     height: 63vh;
     font-size: 18px;
 }
