@@ -36,7 +36,7 @@ body, html {
 }
 
 .navbar {
-    background: linear-gradient(#2d2d2d, #878787);
+    background: linear-gradient(black, #474747);
     height: 5vh;
     width: 80vw;
     margin-left: 10vw;
@@ -45,7 +45,7 @@ body, html {
 }
 
 .navbar a:hover {
-    background: linear-gradient(#878787, #d8d8d8);
+    background: linear-gradient(#474747, #686868);
     color: black;
 }
 
@@ -78,7 +78,8 @@ body, html {
 
 .player-info {
     float: left;
-    margin: 2vw;
+    margin-left: 7vw;
+    margin-right: 1vw;
     margin-bottom: 1vh;
     margin-top: 4vh;
     padding: 1vw;
@@ -91,7 +92,9 @@ body, html {
 
 .party {
     float: left;
-    margin: 2vw;
+    margin-left: 7vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
     margin-top: 3vh;
     padding: 1vw;
     background: green;
@@ -103,13 +106,14 @@ body, html {
 
 .map {
     float: right;
-    margin-right: 2vw;
+    margin-right: 7vw;
     margin-top: 4vh;
     margin-bottom: 3vh;
+    margin-left: 0vw;
     padding: 1vw;
     background: green;
     color: white;
-    width: 55vw;
+    width: 46vw;
     height: 63vh;
     font-size: 18px;
 }
