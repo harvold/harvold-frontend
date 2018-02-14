@@ -8,7 +8,6 @@ body, html {
     max-width: 100%;
     background: linear-gradient(#607393, #0c2d66);
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .splash-picture {
@@ -46,7 +45,7 @@ body, html {
 
 .navbar a:hover {
     background: linear-gradient(#474747, #686868);
-    color: black;
+    color: white;
 }
 
 .navigation {
@@ -55,7 +54,6 @@ body, html {
     cursor: pointer;
     background-color: rgba(150, 150, 150, 0);
     text-decoration: none;
-    color: yellow;
     line-height: 5vh;
     vertical-align: middle;
     margin: 0;
@@ -65,7 +63,7 @@ body, html {
     font-family: 'Nova Square', sans-serif;
     font-style: bold;
     font-size: 20px;
-    color: #f2f2f2;
+    color: #c4c4c4;
     border-left: solid;
     border-right: solid;
     border-color: #f2f2f2;
@@ -87,8 +85,8 @@ body, html {
     margin-bottom: 1vh;
     margin-top: 4vh;
     padding: 1vw;
-    background: green;
-    color: white;
+    background: #c4c4c4;
+    color: black;
     width: 15vw;
     height: 25vh;
     font-size: 12px;
@@ -99,25 +97,39 @@ body, html {
     margin-left: 7vw;
     margin-right: 1vw;
     margin-bottom: 1vh;
-    margin-top: 3vh;
+    margin-top: 1vh;
     padding: 1vw;
-    background: green;
-    color: white;
+    padding-top: 0vh;
+    background: #c4c4c4;
+    color: black;
     width: 15vw;
-    height: 30vh;
+    height: 34vh;
     font-size: 12px;
+}
+
+.map-name {
+    width: 46vw;
+    height: 4vh;
+    float: right;
+    padding-top: 0.8vh;
+    margin-right: 7vw;
+    margin-top: 4vh;
+    margin-bottom: 0vh;
+    margin-left: 0vw;
+    text-align: center;
+    color: #c4c4c4;
+    font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
+    background: linear-gradient(black, #474747);
 }
 
 .map {
     float: right;
     margin-right: 7vw;
-    margin-top: 4vh;
+    margin-top: 0vh;
     margin-bottom: 3vh;
     margin-left: 0vw;
-    padding: 1vw;
-    background: green;
-    color: white;
+    padding: 0vw;
     width: 46vw;
-    height: 63vh;
-    font-size: 18px;
+    height: 62.5vh;
 }
