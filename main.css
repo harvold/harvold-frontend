@@ -15,7 +15,7 @@ body, html {
     /* Image */
     background-image: url(Images/splash%20page%20v2.png);
 
-    height: 21.5vh;
+    height: 192px;
     width: 80vw;
     margin-left: 10vw;
     background-attachment: scroll;
@@ -71,4 +71,14 @@ body, html {
     width: 80vw;
     margin-left: 10vw;
     position: absolute;
+}
+
+.info-section {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background: green;
+    color: white;
+    width: 20vw;
 }
