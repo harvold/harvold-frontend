@@ -62,10 +62,15 @@ body, html {
     padding: auto;
     text-align: center;
     display: inline-block;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Nova Square', sans-serif;
+    font-style: italic;
     font-style: bold;
     font-size: 20px;
-    color: white;
+    color: #f2f2f2;
+    border-left: solid;
+    border-right: solid;
+    border-color: #f2f2f2;
+    border-width: thin;
 }
 
 .main-body {
