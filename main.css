@@ -27,9 +27,12 @@ body, html {
 
 .logo {
     height: 20vh;
-    position: absolute;
+    position: relative;
     display: block;
     bottom: 0;
+    vertical-align: middle;
+    padding-top: 2vh;
+    padding-left: 1vw;
 }
 
 .navbar {
