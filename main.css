@@ -11,9 +11,9 @@ body, html {
 
 .splash-picture {
     /* Image */
-    background-image: url(Images/splash%20page.png);
+    background-image: url(Images/splash%20page%20v2.png);
 
-    height: 35vh;
+    height: 25vh;
     width: 80vw;
     margin-left: 10vw;
     background-attachment: scroll;
