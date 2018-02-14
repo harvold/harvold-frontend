@@ -80,7 +80,7 @@ body, html {
 
 .player-info {
     float: left;
-    margin-left: 7vw;
+    margin-left: 11vw;
     margin-right: 1vw;
     margin-bottom: 1vh;
     margin-top: 4vh;
@@ -94,7 +94,7 @@ body, html {
 
 .party {
     float: left;
-    margin-left: 7vw;
+    margin-left: 11vw;
     margin-right: 1vw;
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -108,11 +108,11 @@ body, html {
 }
 
 .map-name {
-    width: 46vw;
+    width: 40vw;
     height: 4vh;
     float: right;
     padding-top: 0.8vh;
-    margin-right: 7vw;
+    margin-right: 11vw;
     margin-top: 4vh;
     margin-bottom: 0vh;
     margin-left: 0vw;
@@ -125,11 +125,12 @@ body, html {
 
 .map {
     float: right;
-    margin-right: 7vw;
+    margin-right: 11vw;
     margin-top: 0vh;
     margin-bottom: 3vh;
     margin-left: 0vw;
     padding: 0vw;
-    width: 46vw;
+    width: 40vw;
     height: 62.5vh;
+    background: #c4c4c4;
 }
