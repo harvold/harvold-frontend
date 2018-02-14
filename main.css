@@ -15,7 +15,7 @@ body, html {
     /* Image */
     background-image: url(Images/splash%20page%20v2.png);
 
-    height: 192px;
+    height: 25vh;
     width: 80vw;
     margin-left: 10vw;
     background-attachment: scroll;
