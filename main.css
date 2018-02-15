@@ -71,19 +71,39 @@ body, html {
 }
 
 .main-body {
-    background: #edf0f4;
-    height: 100vh;
+    background: #faf7ff;
+    height: auto;
     width: 80vw;
     margin-left: 10vw;
     position: absolute;
 }
 
-.player-info {
+.info-header {
+    display: inline-block;
+    width: 15vw;
+    height: 2vw auto;
     float: left;
+    padding: 1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0vh;
     margin-left: 11vw;
     margin-right: 1vw;
-    margin-bottom: 1vh;
     margin-top: 4vh;
+    margin-bottom: 0vh;
+    text-align: center;
+    color: #c4c4c4;
+    font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
+    background: linear-gradient(black, #474747);
+}
+
+.player-info {
+    float: left;
+    display: inline-block;
+    margin-left: 11vw;
+    margin-right: 1vw;
+    margin-bottom: 0vh;
+    margin-top: -0.5vh;
     padding: 1vw;
     background: #c4c4c4;
     color: black;
@@ -92,26 +112,28 @@ body, html {
     font-size: 12px;
 }
 
-.party {
+.chat-box {
     float: left;
     margin-left: 11vw;
     margin-right: 1vw;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    margin-bottom: 5vh;
+    margin-top: 0vh;
     padding: 1vw;
-    padding-top: 0vh;
+    padding-top: 1vw;
+    padding-bottom: 0;
     background: #c4c4c4;
     color: black;
     width: 15vw;
-    height: 23.4vw;
+    height: 18.5vw;
     font-size: 12px;
 }
 
 .map-name {
     width: 40vw;
-    height: 4vh;
+    height: 2vw auto;
     float: right;
-    padding-top: 0.8vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
     margin-right: 11vw;
     margin-top: 4vh;
     margin-bottom: 0vh;
@@ -127,10 +149,23 @@ body, html {
     float: right;
     margin-right: 11vw;
     margin-top: 0vh;
-    margin-bottom: 3vh;
+    margin-bottom: 0vh;
     margin-left: 0vw;
     padding: 0vw;
     width: 40vw;
     height: 35vw;
     background: #c4c4c4;
 }
+/*
+.party {
+    margin: 11vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: 20vh;
+    background: grey;
+    display: inline-block;
+    width: 58vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    text-align: center;
+}*/
