@@ -88,7 +88,7 @@ body, html {
     background: #c4c4c4;
     color: black;
     width: 15vw;
-    height: 25vh;
+    height: 10vw;
     font-size: 12px;
 }
 
@@ -103,7 +103,7 @@ body, html {
     background: #c4c4c4;
     color: black;
     width: 15vw;
-    height: 34vh;
+    height: 23.4vw;
     font-size: 12px;
 }
 
@@ -131,6 +131,6 @@ body, html {
     margin-left: 0vw;
     padding: 0vw;
     width: 40vw;
-    height: 62.5vh;
+    height: 35vw;
     background: #c4c4c4;
 }
