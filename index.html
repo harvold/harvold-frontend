@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+
 <html>   
-    <head> <!-- MINOR CHANGE MINOR CHANGE MINOR CHANGE MINOR CHANGE -->
+
     <title>Project Harvold</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
         <style>
             @import url('https://fonts.googleapis.com/css?family=Nova+Square');
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="gameplay.js"></script>
     </head>
  
 <body>
@@ -25,7 +28,7 @@
     <div class="main-body">
         <p class="info-header">Party</p>
         <h1 class="map-name">Route 101</h1>
-            <img class="map" src="Images/map%20filler.png">
+        <div id="map"></div>
         <div class="player-info">Text-box 1<br>More content<br>Player info and stuff<br>Box with and height are fixed atm</div>
         <p class="info-header">Chat</p>
         <div class="chat-box">Text box 2<br>Party is displayed here<br>Empty slots<br>width and height are fixed atm</div>

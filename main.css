@@ -145,7 +145,7 @@ body, html {
     background: linear-gradient(black, #474747);
 }
 
-.map {
+#map {
     float: right;
     margin-right: 11vw;
     margin-top: 0vh;
@@ -154,8 +154,17 @@ body, html {
     padding: 0vw;
     width: 40vw;
     height: 35vw;
-    background: #c4c4c4;
+    background: url(Images/map%20filler.png);
 }
+
+#player {
+    position: absolute;
+    background: url(player%20sprite.png) no-repeat;
+    height: 13.5px;
+    width: 13.5px;
+    border: 1px solid red;
+}
+
 /*
 .party {
     margin: 11vw;
