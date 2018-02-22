@@ -155,6 +155,8 @@ body, html {
     width: 40vw;
     height: 35vw;
     background: url(Images/map%20filler.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #player {
