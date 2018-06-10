@@ -34,8 +34,6 @@ body    {
     border-radius: 4px;
 }
 
-
-
 .nav-bot .container-fluid {
     padding: 0px;
 }
@@ -135,6 +133,10 @@ body    {
     padding: 6px;
     border-radius: 2px;
     color: white;
+    text-shadow: 1px 1px #c17400;
+    border-top: 1px solid #ffdfaf;
+    border-left: 1px solid #ffdfaf;
+    border-bottom: 1px solid #c17400;
 }
 
 .button {
@@ -157,4 +159,12 @@ body    {
 ul  {
     list-style-type: none;
     padding: 0px;
+}
+
+p   {
+    font-family: Montserrat;
+}
+
+table   {
+    font-family: Montserrat;
 }
