@@ -260,10 +260,19 @@ table   {
 
 .health-bar {
     background-color: #dae3f2;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .health {
+    height: 2px;
+}
+
+.exp-bar {
+    background-color: #dae3f2;
+    margin-top: 2px;
+}
+
+.exp {
     height: 2px;
 }
 
