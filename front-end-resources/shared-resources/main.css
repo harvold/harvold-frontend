@@ -45,7 +45,7 @@ body    {
 
 .nav-top .container-fluid .navbar-header    {
     background: linear-gradient(#5996f7, #477dd3);
-    border-bottom: 1px solid #204d93;
+    border: none;
 }
 
 .nav-top .container-fluid .navbar-header button {
