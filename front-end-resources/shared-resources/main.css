@@ -15,6 +15,10 @@ body    {
     margin: 10px auto;
 }
 
+#logo-link  {
+    width: 300px!important;
+}
+
 @media only screen and (min-width: 768px)   {
     .narrow   {
         display: none;
@@ -32,6 +36,12 @@ body    {
         background: linear-gradient(#204d93, #477dd3);
         border-left: 1px solid #204d9300!important;
         border-right: 1px solid #204d93;
+    }
+}
+
+@media only screen and (max-width: 1000px)  {
+    .revenue    {
+        display: none;
     }
 }
 
