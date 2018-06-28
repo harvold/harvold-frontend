@@ -27,14 +27,28 @@ body    {
     .party-info {
         padding: 2px 6px;
     }
+    
+    .nav-bot .container-fluid .navbar-nav .dropdown-toggle:active, .open .dropdown-toggle {
+        background: linear-gradient(#204d93, #477dd3);
+        border-left: 1px solid #204d9300!important;
+        border-right: 1px solid #204d93;
+    }
 }
 
 @media only screen and (max-width: 769px)   {
+    #logo   {
+        margin-top: 60px;
+    }
     .wide   {
         display: none;
     }
     .party-box  {
         width: 100px;
+    }
+    .nav-bot .container-fluid .navbar-nav .dropdown-toggle:active, .open .dropdown-toggle {
+        background: linear-gradient(#477dd3, #477dd3);
+        text-shadow: 0 0 5px #00000080;
+        color: white;
     }
 }
 
@@ -61,6 +75,44 @@ body    {
     background: linear-gradient(#204d93, #477dd3);
 }
 
+.nav-top .container-fluid .navbar-collapse  {
+    background-color: #477dd3;
+    border: none;
+}
+
+.nav-top .container-fluid .navbar-collapse li a {
+    margin: 2px 10px;
+    padding: 4px 8px;
+    color: #eaf2ff;
+    font-family: 'Aldrich';
+}
+
+.nav-top .container-fluid .navbar-collapse li a:hover {
+    text-shadow: 0 0 5px #00000080;
+        color: white;
+}
+
+.nav-top .container-fluid .navbar-collapse .dropdown-menu {
+    background-color: #3a6ab7;
+    box-shadow: inset 0px 1px 5px #00000040;
+    border-radius: 0px;
+}
+
+
+.top-menu   {
+    color: #eaf2ff!important;
+    font-size: 11px;
+    padding: 0px;
+    height: 26px;
+}
+
+.top-menu:hover   {
+    text-shadow: 0 0 5px #00000080;
+}
+
+
+
+
 .nav-bot    {
     background: linear-gradient(#5996f7, #477dd3);
     min-height: 20px;
@@ -72,6 +124,7 @@ body    {
 .nav-bot .container-fluid {
     padding: 0px;
 }
+
 
 .nav-bot .container-fluid .navbar-nav .dropdown a    {
     min-height: 32px;
@@ -89,6 +142,7 @@ body    {
     background: linear-gradient(#204d93, #477dd3);
     border-left: 1px solid #204d9300;
     border-right: 1px solid #204d93;
+    text-shadow: 1px 1px #204d93, 0 0 5px #00000000;
 }
 
 .nav-bot .container-fluid .navbar-nav .dropdown:last-child a    {
@@ -97,12 +151,6 @@ body    {
 
 .nav-bot .container-fluid .navbar-nav .dropdown:first-child a    {
     border-left: none;
-}
-
-.nav-bot .container-fluid .navbar-nav .dropdown-toggle:active, .open .dropdown-toggle {
-    background: linear-gradient(#204d93, #477dd3);
-    border-left: 1px solid #204d9300!important;
-    border-right: 1px solid #204d93;
 }
 
 .nav-bot .container-fluid .navbar-nav {
@@ -135,7 +183,7 @@ body    {
 }
 
 .white-back  {
-    background-color: #eaf2ff;
+    background: linear-gradient(#eaf2ff, #dee5ef);
     margin-bottom: 24px;
     padding: 2px 0px 10px 0px;
     border-radius: 6px;
@@ -149,28 +197,24 @@ body    {
     margin: 10px -4px;
     padding: 4px 12px 16px 12px;
     background-color: #f4f8ff;
-    box-shadow: 1px 1px 0 1px #dae3f2, -1px -1px 0 1px #fff;
     overflow: hidden;
     border-radius: 4px;
+    box-shadow: 0px 2px 8px #00000026, inset 0 20px 80px #d5deef80;
 }
 
 .header {
-    margin-bottom: 10px;
-    background: #ffb03a;
-    border: 1px #558ee8;
-    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+    margin: -4px -12px 10px -12px;
+    background: radial-gradient(ellipse at center, #ffca7a, #ffb03a);
+    box-shadow: inset 0 0 8px #ea9619, 0 0 4px #00000040;
     text-align: center;
     text-decoration: none;
-    font-family: 'Aldrich';
+    font-family: Calibri;
     font-size: 18px;
-    font-weight: 900;
     padding: 6px;
-    border-radius: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     color: white;
     text-shadow: 1px 1px #c17400;
-    border-top: 1px solid #ffdfaf;
-    border-left: 1px solid #ffdfaf;
-    border-bottom: 1px solid #c17400;
 }
 
 .button {
@@ -196,7 +240,7 @@ ul  {
 }
 
 p   {
-    font-family: 'Montserrat';
+    font-family: 'Calibri';
     color: #757575;
 }
 
@@ -205,7 +249,7 @@ p   {
 }
 
 table   {
-    font-family: 'Montserrat';
+    font-family: 'Calibri';
     color: #757575;
 }
 
