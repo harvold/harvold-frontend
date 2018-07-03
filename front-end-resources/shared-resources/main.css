@@ -19,6 +19,10 @@ body    {
     width: 300px!important;
 }
 
+#map    {
+    background-image: url(Oak%20Village.png);
+}
+
 @media only screen and (min-width: 768px)   {
     .narrow   {
         display: none;
@@ -279,7 +283,7 @@ table   {
 .party-box  {
     background-color: #dae3f280;
     margin: 2px;
-    height: 40px;
+    height: 60px;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -287,7 +291,7 @@ table   {
 }
 
 .party-box .media-body p    {
-    font-size: 8px;
+    font-size: 12px;
     font-family: 'Aldrich';
     color: #757575;
 }
@@ -314,20 +318,20 @@ table   {
 
 .health-bar {
     background-color: #dae3f2;
-    margin-top: 6px;
+    margin-top: 12px;
 }
 
 .health {
-    height: 2px;
+    height: 4px;
 }
 
 .exp-bar {
     background-color: #dae3f2;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .exp {
-    height: 2px;
+    height: 4px;
 }
 
 h1  {
@@ -343,10 +347,6 @@ h1  {
     text-decoration: none;
 }
 
-.media-left img {
-    width: 28px;
-    height: 20px;
-}
 
 .party  {
     text-align: center;
