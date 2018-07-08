@@ -48,8 +48,9 @@ var keysDown = {
 };
 
 $(() => {
-	// drawMap(mapArray);
-	ctx.font = "bold 10pt sans-serif";
+    // uncomment showTileTypes to see tiles by category on display. For debugging only, shouldn't be used in actual implementation.
+	// showTileTypes(mapArray);
+	ctx.font = "bold 12pt sans-serif";
     
     // temporary test player. Pull spawn position info from database later
     var player = new Character(15, 15, '#ff0800');
@@ -81,7 +82,7 @@ $(() => {
 });
 
 
-function drawMap(mapArray) {
+function showTileTypes(mapArray) {
     for(var i = 0; i < height * width; i++) {
         if(mapArray[i] === 1) {
             ctx.fillStyle = '#00000080';
