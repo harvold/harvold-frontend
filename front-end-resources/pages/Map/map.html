@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="../../shared-resources/template.js"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../shared-resources/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../../shared-resources/icon.png"/>
+</head>
+
+<body>
+
+<nav class="navbar nav-top navbar-inverse navbar-fixed-top narrow" data-role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-alt"></i> Trainer</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Box</a></li>
+                    <li><a href="#">Pokédex</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-globe"></i> Explore</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./map.html">Last Map</a></li>
+                    <li><a href="#">World Map</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-bullseye"></i> Battle</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Gyms/gyms.html">Gym Leaders</a></li>
+                    <li><a href="#">PvP Arena</a></li>
+                    <li><a href="#">Raids Lobby</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-map-marker-alt"></i> Pokéstop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pokécenter</a></li>
+                    <li><a href="#">Pokémart</a></li>
+                    <li><a href="#">Trading Center</a></li>
+                    <li><a href="#">Rankings</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-friends"></i> Social</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Clan</a></li>
+                </ul>
+            </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+
+<div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+
+<a href="../../../index.html"><img src="../../shared-resources/logo.png" class= "img-responsive" id="logo"></a>
+
+<nav class="navbar navbar-inverse nav-bot wide">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-alt"></i> Trainer</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Box</a></li>
+                    <li><a href="#">Pokédex</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-globe"></i> Explore</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./map.html">Last Map</a></li>
+                    <li><a href="#">World Map</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-bullseye"></i> Battle</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Gyms/gyms.html">Gym Leaders</a></li>
+                    <li><a href="#">PvP Arena</a></li>
+                    <li><a href="#">Raids Lobby</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-map-marker-alt"></i> Pokéstop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pokécenter</a></li>
+                    <li><a href="#">Pokémart</a></li>
+                    <li><a href="#">Trading Center</a></li>
+                    <li><a href="#">Rankings</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-friends"></i> Social</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Clan</a></li>
+                </ul>
+            </li>
+    </ul>
+  </div>
+</nav>
+    
+<div class="white-back">
+    <div class="container-fluid">
+        <div class="col-xs-0 col-sm-3 col-md-3 col-lg-3">
+            <div class="white-box">
+                <div class="header">Party</div>
+                <div class="party">
+                <ul>
+                    <li><a href="#" class="party-box">
+                        <div class="media party-info">
+                            <div class="media-left">
+                                <img src="http://www.pokestadium.com/assets/img/sprites/misc/icons/bulbasaur.png">
+                            </div>
+                            <div class="media-body">
+                                <p>Bulbasaur</p>
+                                <p>Level 5</p>
+                            </div>
+                        </div>
+                        <div class="health-bar">
+                            <div class="health" style="width: 85%; background-color: #5ef29a;">
+                            </div>
+                        </div>
+                        <div class="exp-bar">
+                            <div class="exp" style="width: 99%; background-color: #2fc2eb;">
+                            </div>
+                        </div>
+                        <img src="http://www.pokestadium.com/assets/img/sprites/official-art/bulbasaur.png" class="party-img">
+                    </a>
+                    <a href="#" class="party-box">
+                        <div class="media party-info">
+                            <div class="media-left">
+                                <img src="http://www.pokestadium.com/assets/img/sprites/misc/icons/charmander.png">
+                            </div>
+                            <div class="media-body">
+                                <p>Charmander</p>
+                                <p>Level 5</p>
+                            </div>
+                        </div>
+                        <div class="health-bar">
+                            <div class="health" style="width: 55%; background-color: #5ef29a;">
+                            </div>
+                        </div>
+                        <div class="exp-bar">
+                            <div class="exp" style="width: 15%; background-color: #2fc2eb;">
+                            </div>
+                        </div>
+                        <img src="http://www.pokestadium.com/assets/img/sprites/official-art/charmander.png" class="party-img">
+                    </a>
+                    <a href="#" class="party-box">
+                        <div class="media party-info">
+                            <div class="media-left">
+                                <img src="http://www.pokestadium.com/assets/img/sprites/misc/icons/squirtle.png">
+                            </div>
+                            <div class="media-body">
+                                <p>Squirtle</p>
+                                <p>Level 5</p>
+                            </div>
+                        </div>
+                        <div class="health-bar">
+                            <div class="health" style="width: 25%; background-color: #f7e94a;">
+                            </div>
+                        </div>
+                        <div class="exp-bar">
+                            <div class="exp" style="width: 15%; background-color: #2fc2eb;">
+                            </div>
+                        </div>
+                        <img src="http://www.pokestadium.com/assets/img/sprites/official-art/squirtle.png" class="party-img">
+                    </a></li>
+                    <li><a href="#" class="party-box" style="background-color: #e5c7df;">
+                        <div class="media party-info">
+                            <div class="media-left">
+                                <img src="http://www.pokestadium.com/assets/img/sprites/misc/icons/snorlax.png">
+                            </div>
+                            <div class="media-body">
+                                <p>Snorlax</p>
+                                <p>Level 30</p>
+                            </div>
+                        </div>
+                        <div class="health-bar">
+                            <div class="health" style="width: 1%; background-color: #e04b2d;">
+                            </div>
+                        </div>
+                        <div class="exp-bar">
+                            <div class="exp" style="width: 15%; background-color: #2fc2eb;">
+                            </div>
+                        </div>
+                        <img src="http://www.pokestadium.com/assets/img/sprites/official-art/snorlax.png" class="party-img">
+                    </a>
+                    <a href="#" class="party-box" style="background-color: #dae3f2;">
+                        <h1>Empty</h1>
+                    </a>
+                    <a href="#" class="party-box" style="background-color: #dae3f2;">
+                        <h1>Empty</h1>
+                    </a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div class="white-box centered">
+                <div class="header">Map</div>
+                <canvas id="map" width="512" height="448" style="border:1px solid #000000;">Canvas not supported on your browser</canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="col-xs-0 col-sm-0 col-md-1 col-lg-2">
+</div>
+
+</div>
+    
+</body>
+
+<script src="./Gameplay/map-generator.js"></script>
+
+</html>
