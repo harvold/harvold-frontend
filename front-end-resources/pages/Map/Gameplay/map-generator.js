@@ -36,6 +36,7 @@ var mapArray = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
 
+// array of valid positions for players to move to. Number corresponds to number value on mapArray
 const moveSpaces = [
     1, 2,
 ]
@@ -58,18 +59,22 @@ $(() => {
 
 	window.addEventListener("keydown", function(e) {
 		if(e.keyCode === 37) {
+            e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveLeft();
         }
         if(e.keyCode === 38) {
+            e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveUp();
         }
         if(e.keyCode === 39) {
+            e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveRight();
         }
         if(e.keyCode === 40) {
+            e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveDown();
         }
@@ -117,8 +122,9 @@ function erasePlayer(player) {
 function validMove(tileVal) {
     const len = moveSpaces.length;
     for(var i = 0; i < len; i++) {
-        if(tileVal === moveSpaces[i])
+        if(tileVal === moveSpaces[i]) {
             return true;
+        }
     }
     return false;
 }
