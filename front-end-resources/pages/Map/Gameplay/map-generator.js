@@ -73,21 +73,25 @@ $(() => {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveLeft();
+            onBush(mapArray[player.y * width + player.x + 1]);
         }
         if(e.keyCode === 38) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveUp();
+            onBush(mapArray[player.y * width + player.x + 1]);
         }
         if(e.keyCode === 39) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveRight();
+            onBush(mapArray[player.y * width + player.x + 1]);
         }
         if(e.keyCode === 40) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveDown();
+            onBush(mapArray[player.y * width + player.x + 1]);
         }
 	});
 	window.addEventListener("keyup", function(e) {
@@ -117,6 +121,19 @@ function showTileTypes(mapArray) {
         ctx.fillRect(i % width * square, Math.floor(i/width) * square, square, square);
     }
 }
+
+/**
+ * Determines if the player is on a bush
+ * 
+ */
+ function onBush(tiletype) {
+ 	if (tiletype === 1) {
+ 		let randomNum = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
+ 		if ((randomNum >= 12) && (randomNum <= 15)) {
+ 			alert('Pokemon spawned');
+ 		}
+ 	}
+ }
 
 
 /**
