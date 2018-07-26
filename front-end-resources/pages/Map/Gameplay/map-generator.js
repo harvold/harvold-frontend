@@ -4,6 +4,8 @@ var ctx = map.getContext("2d");
 const height = 28;
 const width = 32;
 const square = 16;
+var useMap = false;
+
 
 /**
  * Array holding the map's tile type for movement/interaction logic.
@@ -46,6 +48,9 @@ const moveSpaces = [
     1, 2,
 ]
 
+const moveSpaceLength = moveSpaces.length;
+
+
 /**
  * Tracks whether or not a key is held down. To be used for smooth movement (and anywhere else it can be applied).
  */
@@ -56,8 +61,9 @@ var keysDown = {
 	40 : false
 };
 
+
 /**
- * Game initialization. Creates player and sets up event listeners for movement.
+ * Game initialization. Creates player and sets up event listeners.
  */
 $(() => {
     // uncomment showTileTypes to see tiles by category on display. For debugging only, shouldn't be used in actual implementation.
@@ -69,22 +75,22 @@ $(() => {
     drawPlayer(player);
 
 	window.addEventListener("keydown", function(e) {
-		if(e.keyCode === 37) {
+		if(e.keyCode === 37 && useMap) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveLeft();
         }
-        if(e.keyCode === 38) {
+        if(e.keyCode === 38 && useMap) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveUp();
         }
-        if(e.keyCode === 39) {
+        if(e.keyCode === 39 && useMap) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveRight();
         }
-        if(e.keyCode === 40) {
+        if(e.keyCode === 40 && useMap) {
             e.preventDefault();
             keysDown[e.keyCode] = true;
             player.moveDown();
@@ -94,8 +100,17 @@ $(() => {
 		if(e.keyCode >= 37 && e.keyCode <= 40) { 
             keysDown[e.keyCode] = false;
         }
-	});
-});
+    });
+    
+    // scroll behaviour management. Other window behaviour management (ex. click on text box to type) should also be in here.
+    document.onclick = function(e) {
+        if(e.target === document.getElementById('mapOverlay')) {
+            useMap = true;
+        } else {
+            useMap = false;
+        }
+      }
+    });
 
 /**
  * Displays colour over map to classify terrain types. Should be used for development only.
@@ -144,8 +159,7 @@ function erasePlayer(player) {
  * @param {Number} tileVal 
  */
 function validMove(tileVal) {
-    const len = moveSpaces.length;
-    for(var i = 0; i < len; i++) {
+    for(var i = 0; i < moveSpaceLength; i++) {
         if(tileVal === moveSpaces[i]) {
             return true;
         }
@@ -165,10 +179,10 @@ function Character(x, y, colour) {
     this.height     = 14;
     this.x          = x;
     this.y          = y;
-	this.positionX	= this.x * square + 1;
-    this.positionY  = this.y * square + 1;
+	this.positionX	= this.x * square + ((square - this.width) / 2);
+    this.positionY  = this.y * square + ((square - this.height) / 2);
     this.sprite     = colour;
-    this.moveCd     = 250;
+    this.moveTime     = 250;
     
     /**
      * Draws specific movement.
