@@ -23,6 +23,37 @@ body    {
     background-image: url(../pages/Map/Images/Oak%20Village.png);
 }
 
+#wild-bubble    {
+    background: radial-gradient(#f4f7fc80,#e5efff);
+    height: 130px;
+    width: 130px;
+    border-radius: 65px;
+    border: 4px solid #d0dbed;
+    opacity: 0.9;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+#wild-bubble:hover  {
+    opacity: 1;
+}
+
+container:hover #wild-bubble    {
+    display: block;
+}
+
+#wild-bubble p  {
+    margin-top: -10px;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 768px)   {
     .narrow   {
         display: none;
