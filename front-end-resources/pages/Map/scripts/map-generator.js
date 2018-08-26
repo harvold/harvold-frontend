@@ -1,10 +1,115 @@
 // code for map generation and player handling.
-var map = document.getElementById("map");
-var ctx = map.getContext("2d");
+const map = document.getElementById("map");
+const ctx = map.getContext("2d");
 const height = 28;
 const width = 32;
 const square = 16;
 var useMap = false;
+
+
+/**
+ * Function to create a character object. Will be updated to a class
+ * @param {Number} x x-coordinate position
+ * @param {Number} y y-coordinate position
+ * @param {String} colour Colour of player - will be changed to sprite
+ */
+class Character {
+    constructor(x, y, colour) {
+        this.width     	= 14;
+        this.height     = 14;
+        this.x          = x;
+        this.y          = y;
+        this.positionX	= this.x * square + ((square - this.width) / 2);
+        this.positionY  = this.y * square + ((square - this.height) / 2);
+        this.sprite     = colour;
+        this.moveTime   = 250;
+    }
+
+    /**
+     * Draws player's current position using pixel positioning
+     */
+    drawPlayer() {
+        ctx.fillStyle = this.sprite;
+        ctx.fillRect(this.positionX, this.positionY, this.height, this.width);
+    }
+
+
+    /**
+     * Erases player's current position using pixel positioning
+     */
+    erasePlayer() {
+        ctx.clearRect(this.positionX, this.positionY, this.height, this.width);
+    }
+
+    /**
+     * Draws specific movement.
+     * @param {String} moveValue String describing movement. One of 'up', 'down', 'left', 'right'.
+     */
+    drawMovement(moveValue) {
+        // TODO NEXT: movement animation here
+        this.drawPlayer();
+    }
+
+    moveRight() {
+        if(this.x === width - 1) {
+            // generate new map here. Data should be pulled from backend.
+        } else if(!validMove(mapArray[this.y * width + this.x + 1])) {
+            // handle collision here. Bump back animation or walk on spot animation.
+        } else {
+            // temporary: deprecated when we have animations
+            this.erasePlayer();
+            // handle valid movement
+            this.x++;
+            this.positionX = this.x * square + 1;
+            this.drawMovement('right');
+        }
+    }
+
+    moveLeft() {
+        if(this.x === 0) {
+            // generate new map here. Data should be pulled from backend.
+        } else if(!validMove(mapArray[this.y * width + this.x - 1])) {
+            // handle collision here. Bump back animation or walk on spot animation.
+        } else {
+            // temporary: deprecated when we have animations
+            this.erasePlayer();
+            // handle valid movement
+            this.x--;
+            this.positionX = this.x * square + 1;
+            this.drawMovement('left');
+        }
+    }
+
+    moveUp() {
+        if(this.y === 0) {
+            // generate new map here. Data should be pulled from backend.
+        } else if(!validMove(mapArray[this.y * width + this.x - width])) {
+            // handle collision here. Bump back animation or walk on spot animation.
+        } else {
+            // temporary: deprecated when we have animations
+            this.erasePlayer();
+            // handle valid movement
+            this.y--;
+            this.positionY = this.y * square + 1;
+            this.drawMovement('up');
+        }
+    }
+
+    moveDown() {
+        if(this.y === height - 1) {
+            // generate new map here. Data should be pulled from backend.
+        } else if(!validMove(mapArray[this.y * width + this.x + width])) {
+            // handle collision here. Bump back animation or walk on spot animation.
+        } else {
+            // temporary: deprecated when we have animations
+            this.erasePlayer();
+            // handle valid movement
+            this.y++;
+            this.positionY = this.y * square + 1;
+            this.drawMovement('down');
+        }
+    }
+}
 
 
 /**
@@ -50,6 +155,19 @@ const moveSpaces = [
 
 const moveSpaceLength = moveSpaces.length;
 
+/**
+ * Determines whether or not the tile can be walked onto.
+ * @param {Number} tileVal 
+ */
+function validMove(tileVal) {
+    for(var i = 0; i < moveSpaceLength; i++) {
+        if(tileVal === moveSpaces[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 /**
  * Tracks whether or not a key is held down. To be used for smooth movement (and anywhere else it can be applied).
@@ -63,7 +181,7 @@ var keysDown = {
 
 
 /**
- * Game initialization. Creates player and sets up event listeners.
+ * Game initialization. Creates player and sets up event listeners. Main game loop.
  */
 $(() => {
     // uncomment showTileTypes to see tiles by category on display. For debugging only, shouldn't be used in actual implementation.
@@ -72,7 +190,7 @@ $(() => {
     
     // temporary test player. Pull spawn position info from database later.
     var player = new Character(15, 15, '#ff0800');
-    drawPlayer(player);
+    player.drawPlayer();
 
 	window.addEventListener("keydown", function(e) {
 		if(e.keyCode === 37 && useMap) {
@@ -130,126 +248,5 @@ function showTileTypes(mapArray) {
             ctx.fillStyle = '#FF000080';
         }
         ctx.fillRect(i % width * square, Math.floor(i/width) * square, square, square);
-    }
-}
-
-
-/**
- * Draws player's current position using pixel positioning
- * @param {Object} player Player object
- */
-function drawPlayer(player) {
-    ctx.fillStyle = player.sprite;
-    ctx.fillRect(player.positionX, player.positionY, player.height, player.width);
-    return player;
-}
-
-
-/**
- * Erases player's current position using pixel positioning
- * @param {Object} player Player object
- */
-function erasePlayer(player) {
-    ctx.clearRect(player.positionX, player.positionY, player.height, player.width);
-}
-
-
-/**
- * Determines whether or not the tile can be walked onto.
- * @param {Number} tileVal 
- */
-function validMove(tileVal) {
-    for(var i = 0; i < moveSpaceLength; i++) {
-        if(tileVal === moveSpaces[i]) {
-            return true;
-        }
-    }
-    return false;
-}
-
-
-/**
- * Function to create a character object. Will be updated to a class
- * @param {Number} x x-coordinate position
- * @param {Number} y y-coordinate position
- * @param {String} colour Colour of player - will be changed to sprite
- */
-function Character(x, y, colour) {
-	this.width     	= 14;
-    this.height     = 14;
-    this.x          = x;
-    this.y          = y;
-	this.positionX	= this.x * square + ((square - this.width) / 2);
-    this.positionY  = this.y * square + ((square - this.height) / 2);
-    this.sprite     = colour;
-    this.moveTime     = 250;
-    
-    /**
-     * Draws specific movement.
-     * @param {String} moveValue String describing movement. One of 'up', 'down', 'left', 'right'.
-     */
-    this.drawMovement = function(moveValue) {
-        // TODO NEXT: movement animation here
-        drawPlayer(this);
-    }
-
-    this.moveRight = function() {
-        if(this.x === width - 1) {
-            // generate new map here. Data should be pulled from backend.
-        } else if(!validMove(mapArray[this.y * width + this.x + 1])) {
-            // handle collision here. Bump back animation or walk on spot animation.
-        } else {
-            // temporary: deprecated when we have animations
-            erasePlayer(this);
-            // handle valid movement
-            this.x++;
-            this.positionX = this.x * square + 1;
-            this.drawMovement('right');
-        }
-    }
-
-    this.moveLeft = function() {
-        if(this.x === 0) {
-            // generate new map here. Data should be pulled from backend.
-        } else if(!validMove(mapArray[this.y * width + this.x - 1])) {
-            // handle collision here. Bump back animation or walk on spot animation.
-        } else {
-            // temporary: deprecated when we have animations
-            erasePlayer(this);
-            // handle valid movement
-            this.x--;
-            this.positionX = this.x * square + 1;
-            this.drawMovement('left');
-        }
-    }
-
-    this.moveUp = function() {
-        if(this.y === 0) {
-            // generate new map here. Data should be pulled from backend.
-        } else if(!validMove(mapArray[this.y * width + this.x - width])) {
-            // handle collision here. Bump back animation or walk on spot animation.
-        } else {
-            // temporary: deprecated when we have animations
-            erasePlayer(this);
-            // handle valid movement
-            this.y--;
-            this.positionY = this.y * square + 1;
-            this.drawMovement('up');
-        }
-    }
-
-    this.moveDown = function() {
-        if(this.y === height - 1) {
-            // generate new map here. Data should be pulled from backend.
-        } else if(!validMove(mapArray[this.y * width + this.x + width])) {
-            // handle collision here. Bump back animation or walk on spot animation.
-        } else {
-            // temporary: deprecated when we have animations
-            erasePlayer(this);
-            // handle valid movement
-            this.y++;
-            this.positionY = this.y * square + 1;
-            this.drawMovement('down');
-        }
     }
 }
