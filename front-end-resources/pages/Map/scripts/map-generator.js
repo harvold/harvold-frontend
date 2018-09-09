@@ -149,17 +149,16 @@ var mapArray = [
 /**
  * Array of valid positions to walk on normally.
  */
-const moveSpaces = [
-    1, 2,
+var moveSpaces = [
+    1, 2
 ]
-
-const moveSpaceLength = moveSpaces.length;
 
 /**
  * Determines whether or not the tile can be walked onto.
  * @param {Number} tileVal 
  */
 function validMove(tileVal) {
+    const moveSpaceLength = moveSpaces.length;
     for(var i = 0; i < moveSpaceLength; i++) {
         if(tileVal === moveSpaces[i]) {
             return true;
@@ -172,7 +171,7 @@ function validMove(tileVal) {
 /**
  * Tracks whether or not a key is held down. To be used for smooth movement (and anywhere else it can be applied).
  */
-var keysDown = {
+var action = {
 	37 : false,
 	38 : false,
 	39 : false,
@@ -195,31 +194,32 @@ $(() => {
 	window.addEventListener("keydown", function(e) {
 		if(e.keyCode === 37 && useMap) {
             e.preventDefault();
-            keysDown[e.keyCode] = true;
+            action[e.keyCode] = true;
             player.moveLeft();
         }
         if(e.keyCode === 38 && useMap) {
             e.preventDefault();
-            keysDown[e.keyCode] = true;
+            action[e.keyCode] = true;
             player.moveUp();
         }
         if(e.keyCode === 39 && useMap) {
             e.preventDefault();
-            keysDown[e.keyCode] = true;
+            action[e.keyCode] = true;
             player.moveRight();
         }
         if(e.keyCode === 40 && useMap) {
             e.preventDefault();
-            keysDown[e.keyCode] = true;
+            action[e.keyCode] = true;
             player.moveDown();
         }
-	});
+    });
+
 	window.addEventListener("keyup", function(e) {
 		if(e.keyCode >= 37 && e.keyCode <= 40) { 
-            keysDown[e.keyCode] = false;
+            action[e.keyCode] = false;
         }
     });
-    
+
     // scroll behaviour management. Other window behaviour management (ex. click on text box to type) should also be in here.
     document.onclick = function(e) {
         if(e.target === document.getElementById('mapOverlay')) {
