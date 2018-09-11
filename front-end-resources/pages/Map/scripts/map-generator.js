@@ -180,6 +180,28 @@ var action = {
 
 
 /**
+ * Displays colour over map to classify terrain types. Should be used for development only.
+ * @param {Array<Number>} mapArray 
+ */
+function showTileTypes(mapArray) {
+    for(var i = 0; i < height * width; i++) {
+        if(mapArray[i] === 1) {
+            ctx.fillStyle = '#00000080';
+        } else if(mapArray[i] == 0) {
+            ctx.fillStyle = '#ffffff80';
+        } else if(mapArray[i] == 2) {
+            ctx.fillStyle = '#00800080';
+        } else if(mapArray[i] == 3) {
+            ctx.fillStyle = '#FFA50080';
+        } else {
+            ctx.fillStyle = '#FF000080';
+        }
+        ctx.fillRect(i % width * square, Math.floor(i/width) * square, square, square);
+    }
+}
+
+
+/**
  * Game initialization. Creates player and sets up event listeners. Main game loop.
  */
 $(() => {
@@ -228,25 +250,5 @@ $(() => {
             useMap = false;
         }
       }
-    });
-
-/**
- * Displays colour over map to classify terrain types. Should be used for development only.
- * @param {Array<Number>} mapArray 
- */
-function showTileTypes(mapArray) {
-    for(var i = 0; i < height * width; i++) {
-        if(mapArray[i] === 1) {
-            ctx.fillStyle = '#00000080';
-        } else if(mapArray[i] == 0) {
-            ctx.fillStyle = '#ffffff80';
-        } else if(mapArray[i] == 2) {
-            ctx.fillStyle = '#00800080';
-        } else if(mapArray[i] == 3) {
-            ctx.fillStyle = '#FFA50080';
-        } else {
-            ctx.fillStyle = '#FF000080';
-        }
-        ctx.fillRect(i % width * square, Math.floor(i/width) * square, square, square);
     }
-}
+);
